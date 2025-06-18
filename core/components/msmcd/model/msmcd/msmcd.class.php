@@ -145,7 +145,7 @@ class msMCD
             $product = $this->getSessionProduct();
             $cart[$key]['sum'] = $this->miniShop2->formatPrice($cart[$key]['count'] * $cart[$key]['price']);
             if ($product) {
-                $data = array_merge($cart[$key], $product);
+                $data = array_merge($product, $cart[$key]);
                 $_SESSION['minishop2']['cart'][$key] = $data;
             }
         }
